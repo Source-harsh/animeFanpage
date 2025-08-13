@@ -1,0 +1,268 @@
+* { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+} 
+body { 
+font-family: 'Segoe UI', Tahoma; 
+line-height: 1.6; 
+background: #f0f8ff; 
+color: #333; 
+padding-top: 80px; 
+} 
+/* Dark Mode */ 
+body.dark-mode { 
+background: #1a1a2e; 
+color: #fff; 
+} 
+/* Header */ 
+header { 
+background: #4a90e2; 
+color: white; 
+position: fixed; 
+top: 0; 
+width: 100%; 
+z-index: 1000; 
+box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+} 
+body.dark-mode header { 
+background: #16213e; 
+} 
+.navbar { 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+padding: 1rem 2rem; 
+} 
+.logo { 
+font-size: 1.8rem; 
+font-weight: bold; 
+color: #fff; 
+} 
+.nav-links { 
+display: flex; 
+list-style: none; 
+gap: 2rem; 
+} 
+.nav-links a { 
+color: white; 
+text-decoration: none; 
+font-weight: 500; 
+padding: 0.5rem 1rem; 
+border-radius: 20px; 
+transition: background 0.3s; 
+} 
+.nav-links a:hover { 
+background: rgba(255,255,255,0.2); 
+} 
+.theme-btn { 
+background: rgba(255,255,255,0.2); 
+border: none; 
+border-radius: 50%; 
+font-size: 1.5rem; 
+padding: 0.5rem; 
+cursor: pointer; 
+color: white; 
+} 
+.theme-btn:hover { 
+background: rgba(255,255,255,0.3); 
+} 
+/* Sections */ 
+.section { 
+background: white; 
+margin: 2rem; 
+padding: 2rem; 
+border-radius: 15px; 
+box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+} 
+body.dark-mode .section { 
+background: #2a2a3e; 
+} 
+.section h2 { 
+color: #4a90e2; 
+font-size: 2rem; 
+text-align: center; 
+margin-bottom: 2rem; 
+} 
+body.dark-mode .section h2 { 
+color: #7bb3f0; 
+} 
+/* Anime Cards */ 
+.anime-list { 
+display: flex; 
+f
+ lex-wrap: wrap; 
+gap: 2rem; 
+justify-content: center; 
+} 
+.anime-item { 
+background: #fff5f5; 
+padding: 1.5rem; 
+border-radius: 12px; 
+width: 320px; 
+text-align: center; 
+box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+transition: transform 0.3s; 
+} 
+.anime-item:hover { 
+transform: translateY(-5px); 
+} 
+body.dark-mode .anime-item { 
+background: #3a3a4e; 
+} 
+.anime-item img { 
+width: 180px; 
+height: 180px; 
+border-radius: 10px; 
+object-fit: cover; 
+margin-bottom: 1rem; 
+} 
+.anime-item p { 
+color: #666; 
+font-size: 0.9rem; 
+margin-top: 1rem; 
+} 
+body.dark-mode .anime-item p { 
+color: #ccc; 
+} 
+/* Tables */ 
+table { 
+width: 100%; 
+margin: 1rem 0; 
+border-collapse: collapse; 
+border-radius: 8px; 
+overflow: hidden; 
+} 
+th { 
+background: #4a90e2; 
+color: white; 
+padding: 0.8rem; 
+font-weight: bold; 
+} 
+body.dark-mode th { 
+background: #16213e; 
+} 
+td { 
+background: #f8f9fa; 
+padding: 0.8rem; 
+border-bottom: 1px solid #eee; 
+} 
+body.dark-mode td { 
+background: #2a2a3e; 
+border-bottom: 1px solid #444; 
+color: #fff; 
+} 
+/* Polls */ 
+.poll { 
+background: #f0f8ff; 
+padding: 1.5rem; 
+border-radius: 10px; 
+margin-top: 2rem; 
+border-left: 4px solid #4a90e2; 
+} 
+body.dark-mode .poll { 
+background: #2a2a3e; 
+border-left-color: #7bb3f0; 
+} 
+.poll h3 { 
+color: #4a90e2; 
+margin-bottom: 1rem; 
+} 
+body.dark-mode .poll h3 { 
+color: #7bb3f0; 
+} 
+.poll label { 
+display: block; 
+margin: 0.8rem 0; 
+cursor: pointer; 
+padding: 0.5rem; 
+border-radius: 5px; 
+} 
+.poll label:hover { 
+background: rgba(74,144,226,0.1); 
+} 
+.poll button { 
+background: #4a90e2; 
+color: white; 
+border: none; 
+padding: 0.8rem 2rem; 
+border-radius: 25px; 
+cursor: pointer; 
+font-weight: bold; 
+margin-top: 1rem; 
+} 
+.poll button:hover { 
+background: #357abd; 
+} 
+/* Comments */ 
+#commentForm { 
+display: flex; 
+f
+ lex-direction: column; 
+gap: 1rem; 
+} 
+#commentForm input, 
+#commentForm textarea { 
+padding: 1rem; 
+border: 2px solid #e0e0e0; 
+border-radius: 8px; 
+font-family: inherit; 
+background: white; 
+} 
+body.dark-mode #commentForm input, 
+body.dark-mode #commentForm textarea { 
+background: #2a2a3e; 
+border-color: #444; 
+color: white; 
+} 
+#commentForm input:focus, 
+#commentForm textarea:focus { 
+outline: none; 
+border-color: #4a90e2; 
+} 
+#commentForm button { 
+background: #ff6b6b; 
+color: white; 
+border: none; 
+padding: 1rem 2rem; 
+border-radius: 8px; 
+cursor: pointer; 
+font-weight: bold; 
+} 
+#commentForm button:hover { 
+background: #ff5252; 
+} 
+#commentsList { 
+background: #f8f9fa; 
+padding: 1.5rem; 
+border-radius: 10px; 
+margin-top: 2rem; 
+} 
+body.dark-mode #commentsList { 
+background: #2a2a3e; 
+} 
+/* Mobile Responsive */ 
+@media (max-width: 768px) { 
+.navbar { 
+f
+ lex-direction: column; 
+padding: 1rem; 
+} 
+.nav-links { 
+margin-top: 1rem; 
+gap: 1rem; 
+} 
+.anime-list { 
+f
+ lex-direction: column; 
+align-items: center; 
+} 
+.section { 
+    margin: 1rem; 
+    padding: 1.5rem; 
+  } 
+   
+  body { 
+    padding-top: 120px; 
+  } 
+} 
